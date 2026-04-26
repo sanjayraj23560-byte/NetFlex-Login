@@ -19,15 +19,16 @@ function App() {
     setLoading(true)
     setError('')
     try {
-      axios.post("https://netflex-login-1.onrender.com", {
+      axios.post("https://netflex-login-1.onrender.com/", {
         name: user,
         pass: pass
       })
-      if (res.data === true) {
-        navi('/success')
-      } else {
-        navi('/failed')
-      }
+        .then(res => {
+          console.log(res.data)
+        })
+        .catch(err => {
+          console.error(err)
+        })
     } catch (err) {
       setError('Cannot connect to server. Make sure backend is running.')
     } finally {

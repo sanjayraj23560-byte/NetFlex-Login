@@ -5,7 +5,9 @@ const app      = express()
 const name     = "SANS"
 const password = "123"
 
-app.use(cors())
+app.use(cors({
+  origin: "*"
+}))
 app.use(express.json())
 
 app.post('/', (req, res) => {
