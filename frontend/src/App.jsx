@@ -19,7 +19,7 @@ function App() {
     setLoading(true)
     setError('')
     try {
-      axios.post("https://your-app.onrender.com/", {
+      axios.post("https://netflex-login-1.onrender.com", {
         name: user,
         pass: pass
       })
