@@ -24,7 +24,11 @@ function App() {
         pass: pass
       })
         .then(res => {
-          console.log(res.data)
+          if (res.data === true) {
+            navi('/success')
+          } else {
+            setError('Incorrect username or password.')
+          }
         })
         .catch(err => {
           console.error(err)
