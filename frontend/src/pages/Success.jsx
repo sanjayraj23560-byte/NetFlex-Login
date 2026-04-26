@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { useNavigate } from "react-router-dom"
-import introVideo from "../assets/intro.mp4"
+import introVideo from "../intro.mp4"
 
 const movies = {
   trending: [
