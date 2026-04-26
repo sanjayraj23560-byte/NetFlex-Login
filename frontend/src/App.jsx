@@ -20,8 +20,8 @@ function App() {
     setError('')
     try {
       axios.post("https://netflex-login-1.onrender.com/", {
-        name: user,
-        pass: pass
+        name: user.trim(),
+        pass: pass.trim()
       })
         .then(res => {
           if (res.data === true) {

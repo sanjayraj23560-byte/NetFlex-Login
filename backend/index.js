@@ -11,7 +11,10 @@ app.use(cors({
 app.use(express.json())
 
 app.post('/', (req, res) => {
-  if (req.body.name === name && req.body.pass === password) {
+  const nameInput = req.body.name.trim()
+  const passInput = req.body.pass.trim()
+
+  if (nameInput === name && passInput === password) {
     res.send(true)
   } else {
     res.send(false)
